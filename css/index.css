@@ -1,6 +1,13 @@
 
 .container{
   padding: 15px;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.title{
+  font-size: small;
 }
 
 p{
@@ -30,10 +37,13 @@ p{
 }
 
 .img {
+  max-width: 100%;
   width: auto;
   height: 200px;
   object-fit: cover;
   border-bottom: 1px solid gray;
+  border-top-right-radius: 8px;
+  border-top-left-radius: 8px;
 }
 .product-content{
   height: 100%;
