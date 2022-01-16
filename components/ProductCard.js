@@ -1,6 +1,10 @@
+// Return html elements for a product as a string
+
 function ProductCard(product) {
   const image = product.url_image ? product.url_image : "../assets/default-product-image.png"
   let price = ""
+
+  // Check wether the product has discount in order to display it and change the final price
   if (product.discount) {
     price = `    
     <p class="font-weight-light" style="text-decoration: line-through;">S/ ${(product.price / 100).toFixed(2)}</p>

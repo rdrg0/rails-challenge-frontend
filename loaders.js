@@ -3,6 +3,7 @@ import ProductCard from "./components/ProductCard.js"
 import { loadCategory } from "./listeners.js"
 import getData, { BASE_URL } from "./services/apiFetch.js"
 
+// Fetch data from api then load a component for each result into the DOM
 export function loadProducts() {
   const root = document.querySelector("#root")
   getData(BASE_URL + "/products?per_page=100").then(res => {
@@ -13,6 +14,7 @@ export function loadProducts() {
   })
 }
 
+// Fetch data from api then load a component for each result into the DOM
 export function loadCategories() {
   const categories = document.querySelector("#categories")
   categories.addEventListener("click", loadCategory)
